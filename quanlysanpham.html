@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th{
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        var product = [];
+
+        function displayProducts(){
+            var table=document.getElementById("productTable");
+            table.innerHTML="";
+            products.forEach(function(product){
+                var row=table.insertRow();
+                var cell=row.insertCell();
+                cell.innerHTML=product.name;
+            });
+        }
+
+        function addProduct(){
+            var productName=prompt("Nhập tên sản phẩm");
+            var product={ name: productName};
+            products.push(product);
+            displayProducts();
+        }
+
+        function editProduct(){
+            var productName=prompt("Nhập tên sản phẩm cần sửa");
+            var newProductname=prompt("Nhập tên mới cho sản phẩm");
+
+            products.forEach(function(product){
+                if(product.name===productName){
+                    product.name=newProductname;
+                }
+            });
+            displayProducts();
+        }
+
+        function deleteProduct(){
+            var productName=prompt("Nhập tên sản phẩm cần xóa");
+            products=products.filter(function(product){
+                return product.name!==productName;
+            });
+            displayProducts();
+        }
+    </script>
+</head>
+<body>
+    <h1>Quản lý sản phẩm</h1>
+    <button onclick="displayProducts">Hiển thị danh sách sản phẩm</button>
+    <button onclick="addProduct">Thêm sản phẩm mới</button>
+    <button onclick="editProduct">Sửa tên sản phẩm</button>
+    <button onclick="deleteProduct">Xóa sản phẩm</button>
+    <table id="productTable">
+        <tr>
+            <th>Tên sản phẩm</th>
+        </tr>
+    </table>
+</body>
+</html>
