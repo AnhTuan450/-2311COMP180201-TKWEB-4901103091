@@ -93,9 +93,8 @@
 
     <script type="text/javascript">
 		
-		var productList = []
-
-        var manuafaturerTag = document.getElementById('manuafaturer_name')
+	var productList = []
+	var manuafaturerTag = document.getElementById('manuafaturer_name')
 		for(var key in manufactureList) {
 			manuafaturerTag.innerHTML += `<option value='${key}'>${key}</option>`
 		}
@@ -103,14 +102,13 @@
 		function changeManufaturer() {
 			key = manuafaturerTag.value
 			categoryList = manufactureList[key]
-			console.log(categoryList)
 
 			var categoruTag = document.getElementById('category_name')
-			categoruTag.innerHTML = ''
+			categoryTag.innerHTML = ''
 
 			if(categoryList != null) {
 				for (var i = 0; i < categoryList.length; i++) {
-					categoruTag.innerHTML += `<option value='${categoryList[i]}'>${categoryList[i]}</option>`
+					categoryTag.innerHTML += `<option value='${categoryList[i]}'>${categoryList[i]}</option>`
 				}
 			}
 		}
