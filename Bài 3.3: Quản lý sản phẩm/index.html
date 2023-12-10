@@ -60,12 +60,12 @@
                     <input class="form-control" type="text" name="product_name" id="product_name" placeholder="Enter product name">
                 </div>
                 <div class="form-group">
-					<label>Price:</label>
-					<input class="form-control" type="number" name="price" id="price" placeholder="Enter price" value="0" onkeyup="updateTotalPrice()">
-				</div>
+			<label>Price:</label>
+			<input class="form-control" type="number" name="price" id="price" placeholder="Enter price" value="0" onkeyup="updateTotalPrice()">
+		</div>
                 <div class="form-group">
-					<button class="btn btn-success" type="button" onclick="addProduct()">Add Produce</button>
-					<button class="btn btn-danger" type="reset">Reset</button>
+			<button class="btn btn-success" type="button" onclick="addProduct()">Add Produce</button>
+			<button class="btn btn-danger" type="reset">Reset</button>
 				</div>
             </form>
         </div>
@@ -142,7 +142,6 @@
 		}
 
 		function deleteProduct(index) {
-			console.log(index)
 			productList.splice(index, 1)
 			showProduct();
 		}
@@ -163,7 +162,6 @@
 
 		function editProduct(index) {
 			var product = productList[index]
-			console.log(product)
 			document.getElementById('index').value = index
 			document.getElementById('product_name').value = product.productName
 			changeManufaturer()
