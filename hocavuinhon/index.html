@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<title> Hồ Cá Của Pu</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./mystyle.css">
+	<link rel="icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/4d04d46d-481e-452a-9bfd-75a8c1cc65a3/dfftmiq-d7b827a4-f395-4b7c-9edf-379849cd9429.png/v1/fit/w_512,h_512/feeding_frenzy_2_folder_icon_by_ans0sama_dfftmiq-375w-2x.png" type="image/x-icon">
+</head>
+<body>
+	<button id="musicButton" class="btn_change" onclick="toggleMusic()">
+		<h3>Đổi nhạc</h3>
+	</button>
+	<div id="musicOptions" style="display: none">
+		<ul id="musicList">
+			<li>
+				<button class="btn_change" onclick="playMusic('./music/Feeding Frenzy - Menu Track.mp3')">
+					<h4>Nhạc 1</h4>
+				</button>
+			</li>
+			<li>
+				<button class="btn_change" onclick="playMusic('./music/Feeding Frenzy - Track 1.mp3')">
+					<h4>Nhạc 2</h4>
+				</button>
+			</li>
+		</ul>
+	</div>
+	<div id="container">
+		<audio id="audio" controls autoplay>
+			<source id="audioSource" src="./music/Feeding Frenzy - Menu Track.mp3" />
+		</audio>
+	</div>
 
+	  <div id="background_image">
+		<img id="backgroundImage" src="./video-background/background-2.gif" alt="Background" />
+	  </div>
+	  <button id="settingsButton" class="btn_change" onclick="toggleSettings()">
+		<h3>Đổi nền</h3>
+	  </button>
+	  <div id="backgroundOptions" style="display: none">
+		<ul id="backgroundList">
+		  <li>
+			<button class="btn_change" onclick="changeBackground(0)">
+			  <h4>Nền 1</h4>
+			</button>
+		  </li>
+		  <li>
+			<button class="btn_change" onclick="changeBackground(1)">
+			  <h4>Nền 2</h4>
+			</button>
+		  </li>
+		</ul>
+	  </div>
+	  
+	<div id="botnuoc5" class="bnc"><img src="./images/botnuoc.gif" alt="Bọt nước5"></div>
+	<div id="botnuoc4" class="bnc"><img src="./images/botnuoc.gif" alt="Bọt nước4"></div>
+	<div id="botnuoc3" class="bnc"><img src="./images/botnuoc.gif" alt="Bọt nước3"></div>
+	<div id="botnuoc2" class="bnc"><img src="./images/botnuoc.gif" alt="Bọt nước2"></div>
+	<div id="botnuoc" class="bnc"><img src="./images/botnuoc.gif" alt="Bọt nước"></div>
+
+	<div id="ca1"><img src="./images/player1-left.gif" alt="Cá 1"></div>
+	<div id="ca21"><img src="./images/smallFish.gif" alt="Cá 21"></div>
+	<div id="ca22"><img src="./images/smallFish.gif" alt="Cá 22"></div>
+	<div id="ca23"><img src="./images/smallFish.gif" alt="Cá 23"></div>
+	<div id="ca24"><img src="./images/smallFish.gif" alt="Cá 24"></div>
+	<div id="ca25"><img src="./images/smallFish.gif" alt="Cá 25"></div>
+	<div id="ca3"><img src="./images/shark.gif" alt="Cá 3"></div>
+	<div id="ca4"><img src="./images/player3-right.gif" alt="Cá 4"></div>
+	
+</div>
+<script src="./js/main.js"></script>
+</body>
+</html>
